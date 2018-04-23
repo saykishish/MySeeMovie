@@ -11,6 +11,9 @@
 
 request.getAttribute("choices2");
 
+request.getAttribute("ticket");
+request.getAttribute("seats");
+
 %>    
  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -38,24 +41,25 @@ request.getAttribute("choices2");
 			<tr/>
 			<tr>
 				<td>測試用:</td>
-				<td>${snoopy }</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>片種:</td>
-				<td>喜劇片</td>
+				<td></td>
 			<tr/>
 			
 			<tr>
 				<td>日期:</td>
-				<td>${choices2 }</td>
+				<td><c:forEach var="x" items="${choices2 }">${x } </c:forEach></td>
+				<!-- <td>${choices2 }</td> -->
 			<tr/>
 			<tr>
 				<td>時間:</td>
-				<td>19:30</td>
+				<td></td>
 			<tr/>
 			<tr>
 				<td>票種:</td>
-				<td>全票</td>
+				<td></td>
 			<tr/>
 			<tr>
 				<td>張數:</td>
@@ -63,7 +67,7 @@ request.getAttribute("choices2");
 			<tr/>
 			<tr>
 				<td>座位:</td>
-				<td><c:forEach var="x" items="${ seat }">${x } </c:forEach></td>
+				<td><c:forEach var="x" items="${ seats }">${x } </c:forEach></td>
 				
 			<tr/>
 	

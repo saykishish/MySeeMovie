@@ -150,7 +150,7 @@
 						</tr>
 						<tr class="table-active">
 							<td>
-								<input type="checkbox" name="choice2" value="2"/>
+								<input type="checkbox" name="choice2" value=""/>
 							</td>
 							<td>
 								2018/06/11 (一)

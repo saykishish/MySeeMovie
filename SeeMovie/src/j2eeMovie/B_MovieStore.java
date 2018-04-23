@@ -44,7 +44,7 @@ public class B_MovieStore extends HttpServlet {
 		time = "20:00";
 		ticketType = "成人票";
 		//ticket = 2;
-		toMySQL(title, type, date, time, ticketType, ticket);
+//		toMySQL(title, type, date, time, ticketType, ticket);
 	
 		HttpSession session1 = request.getSession();
 		session1.setAttribute("snoopy", title);

@@ -11,15 +11,19 @@
 
 //String[] choices1 = request.getParameterValues("choice1");
 String[] choices2 = request.getParameterValues("choice2");
+System.out.println(choices2.length);   //元素個數有4個
 //String[] choices3 = (String[])request.getParameterValues("choice3");
 //String[] choices4 = (String[])request.getParameterValues("choice4");
 //String[] choices5 = (String[])request.getParameterValues("choice5");
 
 
-request.setAttribute("choices2", choices2);
+//request.setAttribute("choices2", choices2);
 
 
-response.sendRedirect("test_check.jsp");
+//response.sendRedirect("test_check.jsp");
+//RequestDispatcher dispacher = request.getRequestDispatcher("test_check.jsp");
+//dispacher.include(request, response);
+
 
 //for(String choice : choices1){
 //	out.print(choice + "<br>");

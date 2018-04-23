@@ -11,14 +11,27 @@
 
 <%
 
-String account = request.getParameter("account");
+//String account = request.getParameter("login_account");
 
-if (account == null) {
+if (session.isNew()|| 
+	request.getParameter("account") == null || 
+	request.getParameter("passwd") == null) {
+	
+	//out.print("Please complete the account");
 	response.sendRedirect("test_login.jsp");
 	return;
-}else{
-	response.sendRedirect("test_order.jsp");
 }
+
+String account = request.getParameter("account");
+String passwd = request.getParameter("passwd");
+
+if (account.equals("brad") && passwd.equals("123456")){
+	session.setAttribute("account", account);
+	response.sendRedirect("test_order.jsp");
+}else{
+	response.sendRedirect("test_login.jsp");
+}
+
 
 %>
 

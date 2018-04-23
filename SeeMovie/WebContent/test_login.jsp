@@ -7,17 +7,6 @@
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-
-
-
-<%
-
-String account = (String)session.getAttribute("account");
-
-
-
-%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <meta charset="utf-8">
@@ -86,7 +75,7 @@ String account = (String)session.getAttribute("account");
 			<h5 style="color:red; font-size:16px">
 				(If you do not have an account, please Register first.)
 			</h5>
-			<form action="x_back_login.jsp" method="post" role="form">
+			<form action="LetExistIn" method="post" role="form">
 				<div class="form-group">
 					 
 					<label for="exampleInputEmail1">

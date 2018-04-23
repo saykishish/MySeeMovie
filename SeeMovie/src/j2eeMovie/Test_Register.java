@@ -33,6 +33,7 @@ public class Test_Register extends HttpServlet {
 		session.setAttribute("account", account);
 		session.setAttribute("passwd", passwd);
 		session.setAttribute("email", email);
+		//register 是註冊 不用在這裡用session 先用request舊好?
 		
 		RequestDispatcher dispacher = request.getRequestDispatcher("test_login.jsp");
 		dispacher.include(request, response);

@@ -7,6 +7,53 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+
+String[] choices1 = (String[])request.getParameterValues("choice1");
+String[] choices2 = (String[])request.getParameterValues("choice2");
+String[] choices3 = (String[])request.getParameterValues("choice3");
+String[] choices4 = (String[])request.getParameterValues("choice4");
+String[] choices5 = (String[])request.getParameterValues("choice5");
+
+
+
+
+for(String choice : choices1){
+	out.print(choice + "<br>");
+}
+
+for(String choice : choices2){
+	out.print(choice + "<br>");
+}
+
+for(String choice : choices3){
+	out.print(choice + "<br>");
+}
+
+for(String choice : choices4){
+	out.print(choice + "<br>");
+}
+
+for(String choice : choices5){
+	out.print(choice + "<br>");
+}
+
+//String[] choices2 = (String[])request.getParameterValues("choice2");
+//for(String choice : choices2){
+//	out.print(choice + "<br>");
+//}
+
+
+//String[] name = {"Tony","Marry"};
+
+//for(String one : name) {
+//	out.print(one);
+//}
+
+
+//out.print("辜");
+
+%>
 
 </body>
 </html>

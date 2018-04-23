@@ -73,7 +73,7 @@
 			<h3 style="color:red;">
 				Please complete the form.
 			</h3>
-			<form action="Test_Register" method="post" role="form">
+			<form action="x_back_register.jsp" method="post" role="form">
 				<div class="form-group">
 					 
 					<label for="exampleInputEmail1">
