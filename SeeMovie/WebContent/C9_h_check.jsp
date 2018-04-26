@@ -37,84 +37,113 @@ session.getAttribute("imgString");
 
 <body>
 
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<br>
-			<h3 class="text-center" style="font-size:45px;">
-				訂單確認
-			</h3>
-			<hr>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
+<form action="D_Check" method="get">
+
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-2">
+				<div class="col-md-12">
+					<br>
+					<h3 class="text-center" style="font-size:45px;">
+						訂單確認
+					</h3>
+					<hr>
 				</div>
-				<div class="col-md-8" align="middle">
-					<img alt="imgSee" src="${imgString}" class="rounded" style="width:200px"/>
+			</div>
+			
+			
+			<div class="row">
+				<div class="col-md-12">
+				
+					<div class="row">
+						<div class="col-md-2">
+						</div>
+						
+						<div class="col-md-8" align="middle">
+							<img alt="imgSee" src="${imgString}" class="rounded" style="width:200px"/>
+							<input type="hidden" name="img" value="${imgString}"/>
+						</div>
+						
+						<div class="col-md-2">
+						</div>
+					</div>
+					
 				</div>
-				<div class="col-md-2">
+			</div>
+			
+			
+			<br>
+			
+			
+			<div class="row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4">
+				
+				
+					<table class="table">
+						<tbody>
+							<tr class="table-info">
+								<th>
+									片名:
+								</th>
+								<td>
+									${yebiGoldenIsland}
+									<input type="hidden" name="movieName" value="${yebiGoldenIsland}"/>
+								</td>
+							</tr>
+							<tr class="table-active">
+								<th>
+									時間:
+								</th>
+								<td>
+									<c:forEach var="x" items="${choice1 }">${x } </c:forEach>
+									<c:forEach var="x" items="${choice2 }">${x } </c:forEach>
+									<c:forEach var="x" items="${choice3 }">${x } </c:forEach>
+									<c:forEach var="x" items="${choice4 }">${x } </c:forEach>
+									<c:forEach var="x" items="${choice5 }">${x } </c:forEach>
+									
+									<input type="hidden" name="choice1" value="${choice1}"/>
+									<input type="hidden" name="choice2" value="${choice2}"/>
+									<input type="hidden" name="choice3" value="${choice3}"/>
+									<input type="hidden" name="choice4" value="${choice4}"/>
+									<input type="hidden" name="choice5" value="${choice5}"/>
+								</td>
+							</tr>
+							<tr class="table-success">
+								<th>
+									張數:
+								</th>
+								<td>
+									${ticket }
+									<input type="hidden" name="ticket" value="${ticket}"/>
+								</td>
+							</tr>
+							<tr class="table-warning">
+								<th>
+									座位:
+								</th>
+								<td>
+									<c:forEach var="x" items="${ seats }">${x } </c:forEach>
+									<input type="hidden" name="seats" value="${seats}"/>
+								</td>
+							</tr>
+						</tbody>
+					</table> 
+					
+					
+					<button type="submit" class="btn btn-info btn-lg btn-block">
+						確認
+					</button>
+					
+				</div>
+				<div class="col-md-4">
 				</div>
 			</div>
 		</div>
-	</div>
-	<br>
-	<div class="row">
-		<div class="col-md-4">
-		</div>
-		<div class="col-md-4">
-			<table class="table">
-				<tbody>
-					<tr class="table-info">
-						<th>
-							片名:
-						</th>
-						<td>
-							${yebiGoldenIsland}
-						</td>
-					</tr>
-					<tr class="table-active">
-						<th>
-							時間:
-						</th>
-						<td>
-							<c:forEach var="x" items="${choice1 }">${x } </c:forEach>
-							<c:forEach var="x" items="${choice2 }">${x } </c:forEach>
-							<c:forEach var="x" items="${choice3 }">${x } </c:forEach>
-							<c:forEach var="x" items="${choice4 }">${x } </c:forEach>
-							<c:forEach var="x" items="${choice5 }">${x } </c:forEach>
-						</td>
-					</tr>
-					<tr class="table-success">
-						<th>
-							張數:
-						</th>
-						<td>
-							${ticket }
-						</td>
-					</tr>
-					<tr class="table-warning">
-						<th>
-							座位:
-						</th>
-						<td>
-							<c:forEach var="x" items="${ seats }">${x } </c:forEach>
-						</td>
-					</tr>
-				</tbody>
-			</table> 
-			<button type="button" class="btn btn-info btn-lg btn-block">
-				確認
-			</button>
-		</div>
-		<div class="col-md-4">
-		</div>
-	</div>
-</div>
+		
+		<br>
 
-<br>
+</form>
 
 </body>
 

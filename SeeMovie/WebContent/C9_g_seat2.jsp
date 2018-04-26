@@ -16,9 +16,8 @@
 	//out.print("座位A1沒有了!");
 	
 	boolean isDisabled = false;
-	String seatNumber = null;
 	
-	//String seat = "A4";  //所以想辦法 接收 訂位過來的參數  帶入做判斷
+	String seat = "A4";  //所以想辦法 接收 訂位過來的參數  帶入做判斷
 	
 	Properties props = new Properties();
 	props.setProperty("user", "root");
@@ -31,19 +30,20 @@
 			"jdbc:mysql://localhost/movie",props);
 		
 		//不要select 幾筆了  select*全部  看資料表有哪些:A5 B7，在與下面去判斷 要不要disabled
-		String sql = "SELECT * FROM seat";   //有問號  才會有  這句話pstmt.setString(1, seat);。除錯可以直接先帶A5 
+		String sql = "SELECT count(*) as count FROM seat WHERE seatNumber=?";   //有問號  才會有  這句話pstmt.setString(1, seat);。除錯可以直接先帶A5 
 		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, seat);
 		ResultSet rs = pstmt.executeQuery();
-		while(rs.next()){
-			seatNumber = rs.getString("seatNumber"); //取得資料庫這個欄位
-			System.out.println("isBooked資料有哪些:" + seatNumber);  //有拿到全部 A5 B5了
-			
-		}		
+		rs.next();
+		int count = rs.getInt("count");
 		
-		if(seatNumber != null) {
+		System.out.println("isBooked資料有幾筆:" + count);//1 代表 有一筆資料
+		
+		
+		if(count != 0) {
 			System.out.println("yes it is inside");
-			//RequestDispatcher dispacher = request.getRequestDispatcher("C9_f_order.jsp");
-			//dispacher.include(request, response);
+			RequestDispatcher dispacher = request.getRequestDispatcher("C9_f_order.jsp");
+			dispacher.include(request, response);
 			//只有 disabled = ture 才會進到這裡來。 其他都不會進來。
 			isDisabled = true;
 		}else {

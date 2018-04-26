@@ -25,7 +25,7 @@ String sql = "INSERT INTO member (account,passwd,email)" +
 stmt.execute(sql);
 
 
-RequestDispatcher dispacher = request.getRequestDispatcher("test_login.jsp");
+RequestDispatcher dispacher = request.getRequestDispatcher("C9_e_login.jsp");
 dispacher.include(request, response);
 
 //response.sendRedirect("test_login.jsp");

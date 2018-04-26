@@ -20,7 +20,8 @@ import javax.servlet.http.HttpSession;
 
 @WebServlet("/LetExistIn")
 public class LetExistIn extends HttpServlet {
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		
@@ -29,6 +30,7 @@ public class LetExistIn extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		request.setCharacterEncoding("UTF-8");
 
+		
 		String account = request.getParameter("account");
 		String passwd = request.getParameter("passwd");
 		
@@ -48,7 +50,7 @@ public class LetExistIn extends HttpServlet {
 			
 			if(isExist(account, conn)) {
 				System.out.println("yes it is inside");
-				RequestDispatcher dispacher = request.getRequestDispatcher("test_order.jsp");
+				RequestDispatcher dispacher = request.getRequestDispatcher("C9_f_order.jsp");
 				dispacher.include(request, response);
 			}else {
 				System.out.println("No exist!");

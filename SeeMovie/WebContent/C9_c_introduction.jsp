@@ -1,13 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-<%@ page import="java.sql.*" %>
-<%@ page import="java.util.*" %>
-<%@ page import="bean.ComicVo" %>
-
-<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <meta charset="utf-8">
@@ -22,7 +14,7 @@
 </head>
 
 <body>
-    
+   
     <div class="container-fluid">
     	
 	<div class="row">
@@ -51,7 +43,7 @@
 							 <a class="nav-link" href="http://localhost:8080/SeeMovie/C9_d_register.jsp">Register</a>
 						</li>
 						<li class="nav-item">
-							 <a class="nav-link" href="http://localhost:8080/SeeMovie/C9_e_login.jsp">Login</a>
+							 <a class="nav-link" href="http://localhost:8080/SeeMovie/test_login.jsp">Login</a>
 						</li>
 
 					</ul>
@@ -65,19 +57,21 @@
 			</div>
 		</div>
 	</div>
-	
+
+<form action="Back_introduction.jsp"> 	
 	<div class="row">
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-3">
-			<img alt="Bootstrap Image Preview" src="./imgs/golden.jpg" style="width:200px"/>
+			<img alt="imgString" src="./imgs/golden.jpg" style="width:200px"/>
 			<br>
 			<div class="row">
 				<div class="col-md-12">
 					 
-					<button type="button" class="btn btn-success btn-block active btn-lg">
-						訂票
-					</button>
+						<button type="submit" class="btn btn-success btn-block active btn-lg">
+							訂票
+						</button>
+					
 				</div>
 			</div>
 		</div>
@@ -212,6 +206,8 @@
 		<div class="col-md-1">
 		</div>
 	</div>
+</form>
+	
 	<div class="row">
 		<div class="col-md-1">
 		</div>
@@ -252,6 +248,7 @@
 	</div>
 </div>
     <br>
+
 </body>
 
 </html>

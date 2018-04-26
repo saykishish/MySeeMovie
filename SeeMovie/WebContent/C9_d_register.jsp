@@ -73,20 +73,22 @@
 			<h3 style="color:red;">
 				Please complete the form.
 			</h3>
-			<form role="form">
+			
+			
+			<form action="Back_register.jsp" method="post" role="form">
 				<div class="form-group">
 					 
 					<label for="exampleInputEmail1">
 						Account
 					</label>
-					<input type="text" class="form-control" id="exampleInputAccount" />
+					<input type="text" name="account" class="form-control" id="exampleInputAccount" />
 				</div>
 				<div class="form-group">
 					 
 					<label for="exampleInputPassword1">
 						Password
 					</label>
-					<input type="password" class="form-control" id="exampleInputPassword1" />
+					<input type="password" name="passwd" class="form-control" id="exampleInputPassword1" />
 				</div>
 				<div class="form-group">
 					 
@@ -100,12 +102,14 @@
 					<label for="exampleInputEmail1">
 						Email address
 					</label>
-					<input type="email" class="form-control" id="exampleInputEmail1" />
+					<input type="email" name="email" class="form-control" id="exampleInputEmail1" />
 				</div>
 				<button type="submit" class="btn btn-primary">
 					Submit
 				</button>
 			</form>
+			
+			
 		</div>
 		<div class="col-md-3">
 		</div>

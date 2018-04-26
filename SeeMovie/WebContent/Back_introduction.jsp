@@ -7,6 +7,21 @@
 <title>Insert title here</title>
 </head>
 <body>
-Hello, welcome dear
+<%
+
+
+
+if(session.getAttribute("account") == null){
+	response.sendRedirect("C9_d_register.jsp");
+	return;
+}
+
+if(session.getAttribute("account") != null){	
+	response.sendRedirect("C9_f_order.jsp");
+	return;
+}
+
+
+%>
 </body>
 </html>

@@ -184,6 +184,8 @@
             			
             			<td class="table-success" style="font-size:25px;">走</td>
             			
+            			<!-- 現在要寫陣列 讓他去對應，才能知道 對應的哪個座位要是disable。
+            			 現在這樣只是value而已，所以用陣列來裝 這32個資料-->
             			<!-- if() 接 單列敘述句 -->
             			<td><input type="checkbox" name="seat" value="A5" <% if (isDisabled) out.println("disabled"); %>></td>
             			<td><input type="checkbox" name="seat" value="A6"></td>
