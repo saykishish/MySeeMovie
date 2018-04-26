@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import bean.ComicVo;
 
@@ -26,24 +27,34 @@ public class A_Jump extends HttpServlet {
 		
 		
 		String[] movieNames = request.getParameterValues("seeMovie");
-		request.setAttribute("movieNames", movieNames);
+		System.out.println("movieNames 元數個數:" + movieNames.length);
+		//request.setAttribute("movieNames", movieNames);
+		HttpSession session = request.getSession();
+		session.setAttribute("movieNames", movieNames);
+
+		//而且不用用這麼多 dispacher ，可以直接在這個後端 處理完邏輯
+		RequestDispatcher dispacher = request.getRequestDispatcher("b_movieList.jsp");
+		dispacher.include(request, response);
+
 		
-		
-		List<String> tempMapList = new ArrayList<>();
-		ComicVo theData = null;
+		List<ComicVo> tempMapList = new ArrayList<>();
+		//ComicVo theData = null;
 		String movieName = null; String year = null ; String img = null;
 		
 		for(int j=0; j<100; j++) {
-		theData = new ComicVo(movieName,year,img);
-		theData.setName(movieName);
-		theData.setName(year);
-		theData.setName(img);
+			//theData = new ComicVo(movieName,year,img);  
+			//在這裡都只是同一個變數，所以迴圈100次也只會一直被蓋過去，所以要在這裡宣告才會是新的變數裝的東西。
+			ComicVo theData = new ComicVo(movieName,year,img); //像這樣
+			
+			theData.setName(movieName);
+			theData.setName(year);
+			theData.setName(img);
+			
+			tempMapList.add(theData);
+		}
 		
-		//tempMapList.add(theData);
-	}
 		
-		
-		request.setAttribute("tempMapList", tempMapList);//把資料都裝近來
+//		request.setAttribute("tempMapList", tempMapList);//把資料都裝近來
 		
 		
 		
@@ -66,8 +77,6 @@ public class A_Jump extends HttpServlet {
 		}
 		
 
-		RequestDispatcher dispacher = request.getRequestDispatcher("b_movieList.jsp");
-		dispacher.include(request, response);
 		
 	
 	}//doGet

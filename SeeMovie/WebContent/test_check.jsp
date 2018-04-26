@@ -9,10 +9,24 @@
 
 //String tickek = (String)session.getAttribute("myTicket");
 
-request.getAttribute("choices2");
+//request.getAttribute("choice1");
+//request.getAttribute("choice2");
+//request.getAttribute("choice3");
+//request.getAttribute("choice4");
+//request.getAttribute("choice5");
+
+session.getAttribute("choice1");
+session.getAttribute("choice2");
+session.getAttribute("choice3");
+session.getAttribute("choice4");
+session.getAttribute("choice5");
+
 
 request.getAttribute("ticket");
 request.getAttribute("seats");
+
+session.getAttribute("yebiGoldenIsland");
+session.getAttribute("imgString");
 
 %>    
  
@@ -33,33 +47,27 @@ request.getAttribute("seats");
 	
 			<tr>
 				<td>片名:</td>
-				<td><c:forEach var="x" items="${ movieName }">${x } </c:forEach></td>
+				<td>${yebiGoldenIsland}</td>
+				<!-- <td><c:forEach var="x" items="${ movieName }">${x } </c:forEach></td> -->
 			<tr/>
 			<tr>
 				<td>照片:</td>
-				<td><c:forEach var="x" items="${theImg }">${x } </c:forEach></td>
+				<img alt="Bootstrap Image Preview" src="${imgString}" style="width:200px"/>
+				<!-- <td><c:forEach var="x" items="${theImg }">${x } </c:forEach></td> -->
 			<tr/>
 			<tr>
-				<td>測試用:</td>
-				<td></td>
+				<td>日期  時間  聽次:</td>
+			<tr/>
+			<tr>	
+				<td>
+					<c:forEach var="x" items="${choice1 }">${x } </c:forEach>
+					<c:forEach var="x" items="${choice2 }">${x } </c:forEach>
+					<c:forEach var="x" items="${choice3 }">${x } </c:forEach>
+					<c:forEach var="x" items="${choice4 }">${x } </c:forEach>
+					<c:forEach var="x" items="${choice5 }">${x } </c:forEach>
+				</td>				
 			</tr>
-			<tr>
-				<td>片種:</td>
-				<td></td>
-			<tr/>
-			
-			<tr>
-				<td>日期:</td>
-				<td><c:forEach var="x" items="${choices2 }">${x } </c:forEach></td>
-				<!-- <td>${choices2 }</td> -->
-			<tr/>
-			<tr>
-				<td>時間:</td>
-				<td></td>
-			<tr/>
-			<tr>
-				<td>票種:</td>
-				<td></td>
+				<!-- <td><c:forEach var="x" items="${choices2 }">${x } </c:forEach></td> -->
 			<tr/>
 			<tr>
 				<td>張數:</td>
@@ -67,10 +75,8 @@ request.getAttribute("seats");
 			<tr/>
 			<tr>
 				<td>座位:</td>
-				<td><c:forEach var="x" items="${ seats }">${x } </c:forEach></td>
-				
-			<tr/>
-	
+				<td><c:forEach var="x" items="${ seats }">${x } </c:forEach></td>				
+			<tr/>	
 		
 	</table>
 	

@@ -7,7 +7,6 @@
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <meta charset="utf-8">
@@ -48,10 +47,10 @@
 						</li>
 						
 						<li class="nav-item">
-							 <a class="nav-link" href="#">Register</a>
+							 <a class="nav-link" href="http://localhost:8080/SeeMovie/C9_d_register.jsp">Register</a>
 						</li>
 						<li class="nav-item">
-							 <a class="nav-link" href="#">Login</a>
+							 <a class="nav-link" href="http://localhost:8080/SeeMovie/C9_e_login.jsp">Login</a>
 						</li>
 
 					</ul>
@@ -71,25 +70,25 @@
 		</div>
 		<div class="col-md-6">
 			<h3>
-				Please Login First.
+				Please Login First. 
 			</h3>
 			<h5 style="color:red; font-size:16px">
 				(If you do not have an account, please Register first.)
-			</h5>			
-			<form role="form">
+			</h5>
+			<form action="LetExistIn" method="post" role="form">
 				<div class="form-group">
 					 
 					<label for="exampleInputEmail1">
 						Account
 					</label>
-					<input type="text" class="form-control" id="exampleInputAccount" />
+					<input type="text" name="account" class="form-control" id="exampleInputAccount" />
 				</div>
 				<div class="form-group">
 					 
 					<label for="exampleInputPassword1">
 						Password
 					</label>
-					<input type="password" class="form-control" id="exampleInputPassword1" />
+					<input type="password" name="passwd" class="form-control" id="exampleInputPassword1" />
 				</div>
 				<button type="submit" class="btn btn-primary">
 					Submit

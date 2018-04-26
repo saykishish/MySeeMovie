@@ -48,10 +48,10 @@
 						</li>
 						
 						<li class="nav-item">
-							 <a class="nav-link" href="#">Register</a>
+							 <a class="nav-link" href="http://localhost:8080/SeeMovie/C9_d_register.jsp">Register</a>
 						</li>
 						<li class="nav-item">
-							 <a class="nav-link" href="#">Login</a>
+							 <a class="nav-link" href="http://localhost:8080/SeeMovie/C9_e_login.jsp">Login</a>
 						</li>
 
 					</ul>
@@ -68,18 +68,19 @@
 	
 	<br>
 	
-	<form action="x_back_order.jsp" method="get">
+	<form action="test_back_order_fake.jsp" method="get">
 		<div class="row">
 			<div class="col-md-1">
 			</div>
 			<div class="col-md-3">
-				<img alt="Bootstrap Image Preview" src="./imgs/golden.jpg" style="width:200px"/>
+				<img alt="imgString" src="./imgs/golden.jpg" style="width:200px"/>
+				<input type="hidden" name ="imgString" value="./imgs/golden.jpg"/>
 				<br>
 			</div>
 			<div class="col-md-4">
 				<h3>
 					大雄的金銀島
-					<input type='hidden' name='x' value='123' />
+					<input type="hidden" name ="yebiGoldenIsland" value="大雄的金銀島"/>
 				</h3>
 				<address>
 					 <strong>上映 日</strong><br /> 2018/06/09 (六)<br /> 
@@ -133,7 +134,7 @@
 					<tbody>
 						<tr>
 							<td>
-								<input type="checkbox" name="choice1" value="1"/>
+								<input type="checkbox" name="choice1" value=""/>
 							</td>
 							<td>
 								2018/06/09 (六)
@@ -150,11 +151,11 @@
 						</tr>
 						<tr class="table-active">
 							<td>
-								<input type="checkbox" name="choice2" value="2"/>
+								<input type="checkbox" name="choice2" value=""/>
 							</td>
 							<td>
 								2018/06/11 (一)
-								<input type='hidden' name='choice2' value='2018/06/11 (一)' />
+								<input type='hidden' name='choice2' value='2018/06/11 (一)' />								
 							</td>
 							<td>
 								20:00
@@ -167,7 +168,7 @@
 						</tr>
 						<tr class="table-success">
 							<td>
-								<input type="checkbox" name="'choice3'" value="3"/>
+								<input type="checkbox" name="choice3" value=""/>
 							</td>
 							<td>
 								2018/06/13 (三)
@@ -184,7 +185,7 @@
 						</tr>
 						<tr class="table-warning">
 							<td>
-								<input type="checkbox" name="choice4" value="4"/>
+								<input type="checkbox" name="choice4" value=""/>
 							</td>
 							<td>
 								2018/06/20 (三)
@@ -201,7 +202,7 @@
 						</tr>
 						<tr class="table-danger">
 							<td>
-								<input type="checkbox" name="choice5" value="5"/>
+								<input type="checkbox" name="choice5" value=""/>
 							</td>
 							<td>
 								2018/06/22 (五)
@@ -218,6 +219,12 @@
 						</tr>
 					</tbody>
 				</table>
+				
+				<button type="submit" class="btn btn-success">
+					Submit
+				</button>
+				
+				
 			</div>
 			<div class="col-md-1">
 			</div>
@@ -227,9 +234,6 @@
 			</div>
 			<div class="col-md-4">
 				 
-				<button type="submit" class="btn btn-success">
-					Submit
-				</button>
 			</div>
 			<div class="col-md-4">
 			</div>

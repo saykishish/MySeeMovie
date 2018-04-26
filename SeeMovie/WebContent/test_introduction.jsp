@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    
+   
     <div class="container-fluid">
     	
 	<div class="row">
@@ -43,7 +43,7 @@
 							 <a class="nav-link" href="http://localhost:8080/SeeMovie/C9_d_register.jsp">Register</a>
 						</li>
 						<li class="nav-item">
-							 <a class="nav-link" href="#">Login</a>
+							 <a class="nav-link" href="http://localhost:8080/SeeMovie/test_login.jsp">Login</a>
 						</li>
 
 					</ul>
@@ -57,20 +57,21 @@
 			</div>
 		</div>
 	</div>
-	
+
+<form action="test_back_introduction.jsp"> 	
 	<div class="row">
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-3">
-			<img alt="Bootstrap Image Preview" src="./imgs/golden.jpg" style="width:200px"/>
+			<img alt="imgString" src="./imgs/golden.jpg" style="width:200px"/>
 			<br>
 			<div class="row">
 				<div class="col-md-12">
-					 <form action="x_back_order_register.jsp">
+					 
 						<button type="submit" class="btn btn-success btn-block active btn-lg">
 							訂票
 						</button>
-					</form>
+					
 				</div>
 			</div>
 		</div>
@@ -205,6 +206,8 @@
 		<div class="col-md-1">
 		</div>
 	</div>
+</form>
+	
 	<div class="row">
 		<div class="col-md-1">
 		</div>
@@ -245,6 +248,7 @@
 	</div>
 </div>
     <br>
+
 </body>
 
 </html>

@@ -69,7 +69,8 @@
 		</div>
 	</div>
 	
-	<div class="row">
+	
+		<div class="row">
 		<div class="col-md-12">
 			<div class="carousel slide" id="carousel-167744">
 				<ol class="carousel-indicators">
@@ -85,21 +86,17 @@
 						<img class="d-block w-100" alt="Carousel Bootstrap First" src="./imgs/dora3.jpg" />
 						<div class="carousel-caption">
 							<h4>
-								First Thumbnail label
 							</h4>
 							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 							</p>
 						</div>
 					</div>
 					<div class="carousel-item active">
-						<img class="d-block w-100" alt="Carousel Bootstrap Second" src="./imgs/dora1.jpg" style="width:200px"/>
+						<img class="d-block w-100" alt="Carousel Bootstrap Second" src="./imgs/dora2.jpg" />
 						<div class="carousel-caption">
 							<h4>
-								Second Thumbnail label
 							</h4>
 							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 							</p>
 						</div>
 					</div>
@@ -107,13 +104,11 @@
 					<br>
 					
 					<div class="carousel-item" style="margin:30px;">
-						<img class="d-block w-100" alt="Carousel Bootstrap Third" src="./imgs/dora2.jpg" />
+						<img class="d-block w-100" alt="Carousel Bootstrap Third" src="./imgs/dora1.jpg" />
 						<div class="carousel-caption">
 							<h4>
-								Third Thumbnail label
 							</h4>
 							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 							</p>
 						</div>
 					</div>
@@ -130,72 +125,71 @@
 		
 		<div class="col-md-3">
 			<h3>
-				h3. Lorem ipsum dolor sit amet.
+				哆啦A夢電影歷史
 			</h3>
 			<p>
-				Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+				每年春天，在日本的哆啦A夢迷們，總是不會錯過一件大事。 
+				<strong>
+				原來，就是在每年的三月份，《哆啦A夢》的電影在日本各地的電影上映了！
+				</strong>
+				而且，每次《哆啦A夢》的電影總是會往外推到亞洲各地，各個地方的哆啦A夢迷們都能看到這個情節生動、
+				趣味多元的電影作品！ 
+				<strong>
+				只是啊，這電影究竟是怎麼產生出來的？在兩岸三地，哆啦A夢的電影又有甚麼樣的成績呢？
+				欲知後事，且待下面分解！
+				</strong>
+				大長篇漫畫
+				<small>
+				哆啦A夢電影多會先在《快樂快樂》月刊連載漫畫版，就是「大長篇」。
+
+　　			除了《大雄的平行西遊記》因為作者生病，無法連載漫畫以外，其他的電影大多都有，
+　　			連載完後會集結出版單行本。2006 年之後的水田版哆啦A夢大長篇，則都是以獨立的方式發行，
+　　			大長篇的編號因此只維持到 24。大長篇會由東寶公司改映成電影。
+				</small>
 			</p>
 		</div>
 		<div class="col-md-4">
 			<h3>
-				h3. Lorem ipsum dolor sit amet.
+				哆啦A夢電影的起源
 			</h3>
 			<ul>
 				<li class="list-item">
-					Lorem ipsum dolor sit amet
+					僅此一次的例外
 				</li>
 				<li class="list-item">
-					Consectetur adipiscing elit
+					其實當時藤子．F．不二雄對於大長篇電影版，原本決定是「僅此一次」的例外。
 				</li>
 				<li class="list-item">
-					Integer molestie lorem at massa
+					不過上映後卻獲得極多好評，加上作者認為「電影版裡面，可以容納很多短篇故事裡無法創作的好點子」，所以，哆啦A夢電影不知不覺就持續創作了好久好久。
 				</li>
 				<li class="list-item">
-					Facilisis in pretium nisl aliquet
+					藤子PRO 接手後
 				</li>
 				<li class="list-item">
-					Nulla volutpat aliquam velit
+					藤子．F．不二雄過世後，電影版仍由藤子工作室持續編輯下去。除了 2005 年因配音員交接暫停一年外，日本的哆啦A夢迷每年都可以繼續看到哆啦A夢電影。
 				</li>
 				<li class="list-item">
-					Faucibus porta lacus fringilla vel
-				</li>
-				<li class="list-item">
-					Aenean sit amet erat nunc
-				</li>
-				<li class="list-item">
-					Eget porttitor lorem
+					2006 年新配音員上任以後（水田版）的電影，大致上可以區分成「原創」與「改編」2 種型態。前者如《綠之巨人傳》、《人魚大海戰》等，出自電影製作團隊自己發想、或者從藤子老師原作的漫畫短篇中加深加廣而得的作品
 				</li>
 			</ul>
 		</div>
 		<div class="col-md-3">
 			<ol>
 				<li class="list-item">
-					Lorem ipsum dolor sit amet
+					哆啦A夢電影的與眾不同之處
 				</li>
 				<li class="list-item">
-					Consectetur adipiscing elit
+					在 2013 年 3 月 24 日，《哆啦A夢》系列 34 部電影創下不朽紀錄──累計觀影人次突破 1 億人！
 				</li>
 				<li class="list-item">
-					Integer molestie lorem at massa
+					從《大雄與鐵人兵團》以後的電影作品，在開場主題曲開始之前，大雄都會大喊：「哆啦A夢～」。
 				</li>
 				<li class="list-item">
-					Facilisis in pretium nisl aliquet
-				</li>
-				<li class="list-item">
-					Nulla volutpat aliquam velit
-				</li>
-				<li class="list-item">
-					Faucibus porta lacus fringilla vel
-				</li>
-				<li class="list-item">
-					Aenean sit amet erat nunc
-				</li>
-				<li class="list-item">
-					Eget porttitor lorem
+					這已經形成是一個慣例了，只有《大雄的貓狗時空傳》與《大雄的恐龍2006》、《大雄與綠之巨人傳》例外。《新大雄的宇宙開拓史》中，又恢復了。而《大雄的宇宙漂流記》中，很特別的，是由小夫與胖虎取代大雄的角色。
 				</li>
 			</ol>
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
+			<h3 style="text-center:center;">
+				Doraemon
 			</h3>
 		</div>
 		<div class="col-md-1">
@@ -206,106 +200,75 @@
 		</div>
 		<div class="col-md-5">
 			<h3 class="text-center">
-				h3. Lorem ipsum dolor sit amet.
+				獲獎紀錄
 			</h3>
 			<ol>
 				<li class="list-item">
-					Lorem ipsum dolor sit amet
+					哆啦A夢電影曾在 1984 年榮獲電影之日特別功勞獎；1999 年
 				</li>
 				<li class="list-item">
-					Consectetur adipiscing elit
+					《南海大冒險》獲得「日本映畫評鑑動畫獎」
 				</li>
 				<li class="list-item">
-					Integer molestie lorem at massa
+					「文化廳媒體藝術祭動畫部門優秀獎」
 				</li>
 				<li class="list-item">
-					Facilisis in pretium nisl aliquet
+					《大雄與綠色巨人傳》、《新˙大雄的宇宙開拓史》
 				</li>
 				<li class="list-item">
-					Nulla volutpat aliquam velit
+					《大雄的人魚大海戰》等榮獲日本電影金像獎優秀動畫作品獎
 				</li>
 				<li class="list-item">
-					Faucibus porta lacus fringilla vel
+					自民國89年（西元2000年）的《大雄的太陽王傳說》以後
 				</li>
 				<li class="list-item">
-					Aenean sit amet erat nunc
+					每個電影都有其宣傳詞
 				</li>
 				<li class="list-item">
-					Eget porttitor lorem
+					通常都是一個短句，把電影中主要的重點點出
 				</li>
 			</ol>
 		</div>
 		<div class="col-md-5">
 			<div class="media">
-				<img class="mr-3" alt="Bootstrap Media Preview" src="http://www.layoutit.com/img/sports-q-c-64-64-8.jpg" />
+				<img class="mr-3" alt="Bootstrap Media Preview" src="./imgs/ad11.jpg" style="width:20%"/>
 				<div class="media-body">
 					<h5 class="mt-0">
-						Nested media heading
-					</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+						獲獎紀錄
+					</h5> 《哆啦A夢》電影 30 餘年，獲得了好多的獎項。 
 					<div class="media mt-3">
-						 <a class="pr-3" href="#"><img alt="Bootstrap Media Another Preview" src="http://www.layoutit.com/img/sports-q-c-64-64-2.jpg" /></a>
+					</div>
+				</div>
+				
+			</div>
+			<br>
+			<div class="media">
+				<img class="mr-3" alt="Bootstrap Media Preview" src="./imgs/ad22.jpg" style="width:20%"/>
+				<div class="media-body">
+					<div class="media mt-3">
 						<div class="media-body">
 							<h5 class="mt-0">
-								Nested media heading
-							</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+								哆啦A夢，一個不可思議的故事；哆啦A夢，一個四度空間的口袋；哆啦A夢，一個寓教於樂的動畫。
+							</h5> 哆啦A夢中文網，讓你發現更多哆啦A夢。
 						</div>
 					</div>
 				</div>
 			</div>
+
 		</div>
 		<div class="col-md-1">
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-				 
-				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="navbar-toggler-icon"></span>
-				</button> <a class="navbar-brand" href="#">Brand</a>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="navbar-nav">
-						<li class="nav-item active">
-							 <a class="nav-link" href="#">Link <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-							 <a class="nav-link" href="#">Link</a>
-						</li>
-						<li class="nav-item dropdown">
-							 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Dropdown link</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								 <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
-								<div class="dropdown-divider">
-								</div> <a class="dropdown-item" href="#">Separated link</a>
-							</div>
-						</li>
-					</ul>
-					<form class="form-inline">
-						<input class="form-control mr-sm-2" type="text" /> 
-						<button class="btn btn-primary my-2 my-sm-0" type="submit">
-							Search
-						</button>
-					</form>
-					<ul class="navbar-nav ml-md-auto">
-						<li class="nav-item active">
-							 <a class="nav-link" href="#">Link <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item dropdown">
-							 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Dropdown link</a>
-							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-								 <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
-								<div class="dropdown-divider">
-								</div> <a class="dropdown-item" href="#">Separated link</a>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</div>
+	
+	
+	
 </div>  
 
 
 </body>
+	
 
 </html>
+
+
+

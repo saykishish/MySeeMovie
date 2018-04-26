@@ -8,15 +8,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- 靠邀  我沒有把輸入也憶起放在form裡面 -->
+<form action="test_back_centry.jsp" method="get">
 
 請輸入訂票張數:<input type="text" name="ticket" value=""/>	
 <hr>
 
 SCREEN
 <hr>
-
-<form action="test_back_centry.jsp" method="get">
-
 
 	<table>
 		<tr>

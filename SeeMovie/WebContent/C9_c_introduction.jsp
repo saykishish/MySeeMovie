@@ -51,7 +51,7 @@
 							 <a class="nav-link" href="http://localhost:8080/SeeMovie/C9_d_register.jsp">Register</a>
 						</li>
 						<li class="nav-item">
-							 <a class="nav-link" href="#">Login</a>
+							 <a class="nav-link" href="http://localhost:8080/SeeMovie/C9_e_login.jsp">Login</a>
 						</li>
 
 					</ul>

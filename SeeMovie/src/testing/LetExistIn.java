@@ -15,6 +15,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 @WebServlet("/LetExistIn")
@@ -30,6 +31,10 @@ public class LetExistIn extends HttpServlet {
 
 		String account = request.getParameter("account");
 		String passwd = request.getParameter("passwd");
+		
+		HttpSession session = request.getSession();
+		session.setAttribute("account", account);
+		
 		
 		Properties props = new Properties();
 		props.setProperty("user", "root");

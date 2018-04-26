@@ -10,10 +10,12 @@
 <title>Insert title here</title>
 </head>
 <%
-String[] b = (String[])request.getAttribute("movieNames");
-String[] d = (String[])request.getAttribute("theImg");
+//String[] b = (String[])request.getAttribute("movieNames");
+//String[] d = (String[])request.getAttribute("theImg");
 
-request.getAttribute("tempMapList");
+//request.getAttribute("tempMapList");
+
+session.getAttribute("movieNames");
 %>
 
 <hr>
@@ -23,7 +25,8 @@ request.getAttribute("tempMapList");
 <form action="B_MovieStore" method="get">
 	
 	您剛剛選擇要看的電影:
-	<c:forEach items="${tempMapList }" var="y">${y.name } </c:forEach>
+	<c:forEach items="${movieNames}" var="w">${w } </c:forEach>
+	<!--<c:forEach items="${tempMapList }" var="y">${y.name } </c:forEach>-->
 	<br>
 	那個電影的照片:
 	<c:forEach items="${movieNames}" var="w">${w } </c:forEach>

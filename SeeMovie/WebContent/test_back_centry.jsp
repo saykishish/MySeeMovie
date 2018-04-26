@@ -11,20 +11,21 @@
 
 <%
 
-String[] choices2 = request.getParameterValues("choice2");
-request.setAttribute("choices2", choices2);
+//String[] choices2 = request.getParameterValues("choice2");
+//request.setAttribute("choices2", choices2);
 
 String[] seats = request.getParameterValues("seat");
 request.setAttribute("seats", seats);
 
 String ticket = request.getParameter("ticket");
+System.out.println(ticket);
 request.setAttribute("ticket", ticket);
 
-RequestDispatcher dispatcher = request.getRequestDispatcher("test_check.jsp");
+
+
+
+RequestDispatcher dispatcher = request.getRequestDispatcher("C9_h_check.jsp");
 dispatcher.include(request, response);
-
-
-
 
 
 

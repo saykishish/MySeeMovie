@@ -8,6 +8,64 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+
+<%
+	String id = "";
+	String bdTitle = "";
+	String bdYear = "";
+	String bdImg = "";
+	ResultSet rs = null;
+	
+	List<ComicVo> tempMapList = new ArrayList<>();
+	ComicVo theData = null;
+	
+	try {
+		Properties props = new Properties();
+		props.setProperty("user", "root");
+		props.setProperty("password", "root");
+		
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/movie",props);
+		Statement stmt = conn.createStatement();			
+		rs = stmt.executeQuery("SELECT id,title,year,imgLink FROM homepage");
+				
+		while(rs.next()) { 
+			//ComicVo data = new ComicVo();			
+			//ComicVo theData = new ComicVo("name","1990","https://chinesedora.com/images/97movie.jpg");
+	
+			id = rs.getString("id");
+			bdTitle = rs.getString("title");
+			bdYear = rs.getString("year");
+			bdImg = rs.getString("imgLink");
+			
+			//我在這裡一直new new new 物件  然後加加加
+			theData = new ComicVo(bdTitle,bdYear,bdImg);
+			
+			tempMapList.add(theData); //要在這裡重複的迴圈的 把資料放進去 才不會只有最後一筆資料
+		
+		}	
+	}catch(Exception e){
+		System.out.println(e.toString());
+	}
+	
+	
+	//計算總資料量
+	int total = tempMapList.size();
+	System.out.println("總資料量:" + total);  //39筆
+	
+	//計算資料量列數
+	int rows = (int)Math.ceil(total/5.0);
+	System.out.println("資料量列數:" + rows);  //8列
+	
+	
+	
+	pageContext.setAttribute("tempMapList", tempMapList);	
+	pageContext.setAttribute("rows", rows-1);	
+	pageContext.setAttribute("total", total);	
+	
+	
+%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <meta charset="utf-8">
@@ -51,7 +109,7 @@
 							 <a class="nav-link" href="http://localhost:8080/SeeMovie/C9_d_register.jsp">Register</a>
 						</li>
 						<li class="nav-item">
-							 <a class="nav-link" href="#">Login</a>
+							 <a class="nav-link" href="http://localhost:8080/SeeMovie/C9_e_login.jsp">Login</a>
 						</li>
 
 					</ul>
@@ -72,165 +130,54 @@
 		</div>
 	</div>
 	
-	<!-- start movieList -->
-	<div class="row">
-		<div class="col-md-1">
-		</div>
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="./imgs/golden.jpg" style="width:200px"/>
-			<h3>
-				大雄的金銀島
-			</h3> 
-			<button type="button" class="btn btn-success" 
-					onclick="location.href='http://localhost:8080/SeeMovie/C9_c_introduction.jsp'">
-				電影介紹
-			</button>
-		</div>
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="http://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3> 
-			<button type="button" class="btn btn-success">
-				Button
-			</button>
-		</div>
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="http://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3> 
-			<button type="button" class="btn btn-success">
-				Button
-			</button>
-		</div>
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="http://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3> 
-			<button type="button" class="btn btn-success">
-				Button
-			</button>
-		</div>
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="http://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3> 
-			<button type="button" class="btn btn-success">
-				Button
-			</button>
-		</div>
-		<div class="col-md-1">
-		</div>
-	</div>
-	<br>
-	<div class="row">
-		<div class="col-md-1">
-		</div>
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="http://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3> 
-			<button type="button" class="btn btn-success">
-				Button
-			</button>
-		</div>
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="http://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3> 
-			<button type="button" class="btn btn-success">
-				Button
-			</button>
-		</div>
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="http://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3> 
-			<button type="button" class="btn btn-success">
-				Button
-			</button>
-		</div>
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="http://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3> 
-			<button type="button" class="btn btn-success">
-				Button
-			</button>
-		</div>
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="http://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3> 
-			<button type="button" class="btn btn-success">
-				Button
-			</button>
-		</div>
-		<div class="col-md-1">
-		</div>
-	</div>
-	<br>
-	<div class="row">
-		<div class="col-md-1">
-		</div>
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="http://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3> 
-			<button type="button" class="btn btn-success">
-				Button
-			</button>
-		</div>
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="http://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3> 
-			<button type="button" class="btn btn-success">
-				Button
-			</button>
-		</div>
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="http://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3> 
-			<button type="button" class="btn btn-success">
-				Button
-			</button>
-		</div>
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="http://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3> 
-			<button type="button" class="btn btn-success">
-				Button
-			</button>
-		</div>
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="http://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3> 
-			<button type="button" class="btn btn-success">
-				Button
-			</button>
-		</div>
-		<div class="col-md-1">
-		</div>
-	</div>
-	<br>
-	<!-- end movieList -->
+
+
+
+		<c:forEach var="j" begin="0" end="${rows }">
+
+			<!-- start movieList -->
+			<div class="row">
+			
+				<div class="col-md-1">
+				</div>
+		
+		
+				<c:forEach var="i" begin="0" end="4">
+
+					
+					<!-- 要不要印 來做一下判斷 -->
+					<c:if test="${5*j+i < total }">
+				
+						<!-- 以下長五次 -->
+						<div class="col-md-2">
+							<img alt="myImg" src="${tempMapList[5*j+i].img }" style="width:200px"/>
+							<h5>
+								${tempMapList[5*j+i].name }
+							</h5>
+							<h6>${tempMapList[5*j+i].year }</h6>
+							<button type="button" class="btn btn-success" 
+									onclick="location.href='http://localhost:8080/SeeMovie/C9_c_introduction.jsp'">
+								電影介紹
+							</button>
+						</div>
+						<!-- 以上長五次 -->
+		
+		
+					</c:if>
+				
+				</c:forEach>
+				
+				
+				<div class="col-md-1">
+				</div>
+				
+			</div>
+			
+			<br>
+			<!-- end movieList -->
+	
+		</c:forEach>
+	
 
 	<!-- start pagination -->
 	<div class="row">
@@ -267,3 +214,6 @@
 
 </body>
 </html>
+
+
+

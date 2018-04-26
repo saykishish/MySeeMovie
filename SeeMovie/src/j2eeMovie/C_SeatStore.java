@@ -36,17 +36,10 @@ public class C_SeatStore extends HttpServlet {
 			
 			
 			HttpSession session = request.getSession();
-			//int u = seats.length;
-				session.setAttribute("seat", seats);
-				//所以是這一個在作用
-				//前端槓掉 getAttribute("seat"); 也不會有影響
-			
+				session.setAttribute("seat", seats);			
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher("d_check.jsp");
 			dispatcher.include(request, response);
-			
-			
-			
 			
 	}//doGet
 

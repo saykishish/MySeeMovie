@@ -50,7 +50,7 @@
 							 <a class="nav-link" href="http://localhost:8080/SeeMovie/C9_d_register.jsp">Register</a>
 						</li>
 						<li class="nav-item">
-							 <a class="nav-link" href="#">Login</a>
+							 <a class="nav-link" href="http://localhost:8080/SeeMovie/C9_e_login.jsp">Login</a>
 						</li>
 
 					</ul>
@@ -75,6 +75,7 @@
 			<h5 style="color:red; font-size:16px">
 				(If you do not have an account, please Register first.)
 			</h5>
+			
 			<form action="LetExistIn" method="post" role="form">
 				<div class="form-group">
 					 
@@ -94,6 +95,7 @@
 					Submit
 				</button>
 			</form>
+			
 		</div>
 		<div class="col-md-3">
 		</div>

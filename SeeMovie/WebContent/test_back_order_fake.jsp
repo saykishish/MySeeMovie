@@ -8,57 +8,63 @@
 </head>
 <body>
 <%
-
-//String[] choices1 = request.getParameterValues("choice1");
-String[] choices2 = request.getParameterValues("choice2");
-System.out.println(choices2.length);   //元素個數有4個
-//String[] choices3 = (String[])request.getParameterValues("choice3");
-//String[] choices4 = (String[])request.getParameterValues("choice4");
-//String[] choices5 = (String[])request.getParameterValues("choice5");
-
-
-//request.setAttribute("choices2", choices2);
+String yebiGoldenIsland = request.getParameter("yebiGoldenIsland");
+String imgString = request.getParameter("imgString");
+System.out.println("接收電影參數:" + yebiGoldenIsland);
+System.out.println("接收照片參數:" + imgString);
+session.setAttribute("yebiGoldenIsland", yebiGoldenIsland);
+session.setAttribute("imgString", imgString);
 
 
-//response.sendRedirect("test_check.jsp");
-//RequestDispatcher dispacher = request.getRequestDispatcher("test_check.jsp");
-//dispacher.include(request, response);
+String[] choice1 = request.getParameterValues("choice1");
+if(choice1.length == 4){
+	//request.setAttribute("choice1", choice1);
+	session.setAttribute("choice1", choice1);
+	System.out.println(choice1.length); //有拿到4個
+	RequestDispatcher dispacher = request.getRequestDispatcher("C9_g_seat.jsp");
+	dispacher.include(request, response);
+}
 
 
-//for(String choice : choices1){
-//	out.print(choice + "<br>");
-//}
-
-//for(String choice : choices2){
-//	out.print(choice + "<br>");
-//}
-
-//for(String choice : choices3){
-//	out.print(choice + "<br>");
-//}
-
-//for(String choice : choices4){
-//	out.print(choice + "<br>");
-//}
-
-//for(String choice : choices5){
-//	out.print(choice + "<br>");
-//}
-
-//String[] choices2 = (String[])request.getParameterValues("choice2");
-//for(String choice : choices2){
-//	out.print(choice + "<br>");
-//}
+String[] choice2 = request.getParameterValues("choice2");
+if(choice2.length == 4){
+	//request.setAttribute("choice2", choice2);
+	session.setAttribute("choice2", choice2);
+	System.out.println(choice2.length); //有拿到4個
+	RequestDispatcher dispacher = request.getRequestDispatcher("C9_g_seat.jsp");
+	dispacher.include(request, response);
+}
 
 
-//String[] name = {"Tony","Marry"};
+String[] choice3 = request.getParameterValues("choice3");
+if(choice3.length == 4){
+	//request.setAttribute("choice3", choice3);
+	session.setAttribute("choice3", choice3);
+	System.out.println(choice3.length); //有拿到4個
+	RequestDispatcher dispacher = request.getRequestDispatcher("C9_g_seat.jsp");
+	dispacher.include(request, response);
+}
 
-//for(String one : name) {
-//	out.print(one);
-//}
+
+String[] choice4 = request.getParameterValues("choice4");
+if(choice4.length == 4){
+	//request.setAttribute("choice4", choice4);
+	session.setAttribute("choice4", choice4);
+	RequestDispatcher dispacher = request.getRequestDispatcher("C9_g_seat.jsp");
+	dispacher.include(request, response);
+}
 
 
-//out.print("辜");
+String[] choice5 = request.getParameterValues("choice5");
+if(choice5.length == 4){
+	//request.setAttribute("choice5", choice5);
+	session.setAttribute("choice5", choice5);
+	System.out.println(choice5.length); //有拿到4個
+	
+	RequestDispatcher dispacher = request.getRequestDispatcher("C9_g_seat.jsp");
+	dispacher.include(request, response);
+}
+
 
 %>
 
