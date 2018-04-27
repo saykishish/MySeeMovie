@@ -10,15 +10,20 @@
 
 
 <%
-	
 	//動態輸出已經被下訂的座位  disabled
 	
 	//out.print("座位A1沒有了!");
 	
 	boolean isDisabled = false;
 	String seatNumber = null;
-	
+
 	//String seat = "A4";  //所以想辦法 接收 訂位過來的參數  帶入做判斷
+
+	
+	boolean[] isBooking = new boolean[32];
+	//boolean isBooking[] = {false};
+	
+	
 	
 	Properties props = new Properties();
 	props.setProperty("user", "root");
@@ -28,36 +33,47 @@
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn =
 		DriverManager.getConnection(
-			"jdbc:mysql://localhost/movie",props);
+	"jdbc:mysql://localhost/movie",props);
 		
 		//不要select 幾筆了  select*全部  看資料表有哪些:A5 B7，在與下面去判斷 要不要disabled
 		String sql = "SELECT * FROM seat";   //有問號  才會有  這句話pstmt.setString(1, seat);。除錯可以直接先帶A5 
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		ResultSet rs = pstmt.executeQuery();
-		while(rs.next()){
+		while (rs.next()) {
 			seatNumber = rs.getString("seatNumber"); //取得資料庫這個欄位
-			System.out.println("isBooked資料有哪些:" + seatNumber);  //有拿到全部 A5 B5了
-			
-		}		
-		
-		if(seatNumber != null) {
-			System.out.println("yes it is inside");
-			//RequestDispatcher dispacher = request.getRequestDispatcher("C9_f_order.jsp");
-			//dispacher.include(request, response);
-			//只有 disabled = ture 才會進到這裡來。 其他都不會進來。
-			isDisabled = true;
-		}else {
-			System.out.println("No exist!");
+			System.out.println("isBooked資料有哪些:" + seatNumber); //有拿到全部 A5 B5了
+
+			if (seatNumber != null) {
+				System.out.println("yes " + seatNumber + " is inside");
+				//只有 disabled = ture 才會進到這裡來。 其他都不會進來。
+				//isDisabled = true;
+
+				for (int i = 0; i < 32; i++) {
+					isBooking[i] = true;
+				}
+
+			} else {
+				System.out.println("No exist!");
+			}
 		}
+
 		
-	}catch(Exception e) {
+		//if(seatNumber != null) {
+		//System.out.println("yes " + seatNumber + " is inside");
+		//只有 disabled = ture 才會進到這裡來。 其他都不會進來。
+		//isDisabled = true;
+
+		//	for(int i=0; i<32; i++){
+		//		isBooking[i] = true;
+		//	}
+
+		//}else {
+		//	System.out.println("No exist!");
+		//}
+
+	} catch (Exception e) {
 		System.out.println(e.toString());
 	}
-	
-	
-	
-	
-	
 %>
 
 
@@ -177,60 +193,60 @@
 				<tbody>
 					<tr>
             			<td>A</td>
-            			<td><input type="checkbox" name="seat" value="A1"></td>
-            			<td><input type="checkbox" name="seat" value="A2"></td>
-            			<td><input type="checkbox" name="seat" value="A3"></td>
-            			<td><input type="checkbox" name="seat" value="A4"></td>
+            			<td><input type="checkbox" name="seat" value="A1" <% if(isBooking[0]) out.println("disabled"); %>></td>         
+            			<td><input type="checkbox" name="seat" value="A2" <% if(isBooking[1]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="A3" <% if(isBooking[2]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="A4" <% if(isBooking[3]) out.println("disabled"); %>></td>
             			
             			<td class="table-success" style="font-size:25px;">走</td>
             			
             			<!-- if() 接 單列敘述句 -->
-            			<td><input type="checkbox" name="seat" value="A5" <% if (isDisabled) out.println("disabled"); %>></td>
-            			<td><input type="checkbox" name="seat" value="A6"></td>
-            			<td><input type="checkbox" name="seat" value="A7" disabled></td>
-            			<td><input type="checkbox" name="seat" value="A8"></td>
+            			<td><input type="checkbox" name="seat" value="A5" <% if(isBooking[4]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="A6" <% if(isBooking[5]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="A7" <% if(isBooking[6]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="A8" <% if(isBooking[7]) out.println("disabled"); %>></td>
 					</tr>
 					<tr>
             			<td>B</td>
-            			<td><input type="checkbox" name="seat" value="B1"></td>
-            			<td><input type="checkbox" name="seat" value="B2"></td>
-            			<td><input type="checkbox" name="seat" value="B3"></td>
-            			<td><input type="checkbox" name="seat" value="B4"></td>
+            			<td><input type="checkbox" name="seat" value="B1" <% if(isBooking[8]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="B2" <% if(isBooking[9]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="B3" <% if(isBooking[10]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="B4" <% if(isBooking[11]) out.println("disabled"); %>></td>
             			
             			<td class="table-success"></td>
             						
-            			<td><input type="checkbox" name="seat" value="B5"></td>
-            			<td><input type="checkbox" name="seat" value="B6"></td>
-            			<td><input type="checkbox" name="seat" value="B7"></td>
-            			<td><input type="checkbox" name="seat" value="B8"></td>
+            			<td><input type="checkbox" name="seat" value="B5" <% if(isBooking[12]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="B6" <% if(isBooking[13]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="B7" <% if(isBooking[14]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="B8" <% if(isBooking[15]) out.println("disabled"); %>></td>
 					</tr>
 					<tr>
             			<td>C</td>
-            			<td><input type="checkbox" name="seat" value="C1"></td>
-            			<td><input type="checkbox" name="seat" value="C2"></td>
-            			<td><input type="checkbox" name="seat" value="C3"></td>
-            			<td><input type="checkbox" name="seat" value="C4"></td>
+            			<td><input type="checkbox" name="seat" value="C1" <% if(isBooking[16]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="C2" <% if(isBooking[17]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="C3" <% if(isBooking[18]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="C4" <% if(isBooking[19]) out.println("disabled"); %>></td>
             			
             			<td class="table-success"></td>
             			
-            			<td><input type="checkbox" name="seat" value="C5"></td>
-            			<td><input type="checkbox" name="seat" value="C6"></td>
-            			<td><input type="checkbox" name="seat" value="C7"></td>
-            			<td><input type="checkbox" name="seat" value="C8"></td>
+            			<td><input type="checkbox" name="seat" value="C5" <% if(isBooking[20]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="C6" <% if(isBooking[21]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="C7" <% if(isBooking[22]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="C8" <% if(isBooking[23]) out.println("disabled"); %>></td>
 					</tr>
 					<tr>
             			<td>D</td>
-            			<td><input type="checkbox" name="seat" value="D1"></td>
-            			<td><input type="checkbox" name="seat" value="D2"></td>
-            			<td><input type="checkbox" name="seat" value="D3"></td>
-            			<td><input type="checkbox" name="seat" value="D4"></td>
+            			<td><input type="checkbox" name="seat" value="D1" <% if(isBooking[24]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="D2" <% if(isBooking[25]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="D3" <% if(isBooking[26]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="D4" <% if(isBooking[27]) out.println("disabled"); %>></td>
             			
             			<td class="table-success" style="font-size:25px;">道</td>
             			
-            			<td><input type="checkbox" name="seat" value="D5"></td>
-            			<td><input type="checkbox" name="seat" value="D6"></td>
-            			<td><input type="checkbox" name="seat" value="D7"></td>
-            			<td><input type="checkbox" name="seat" value="D8"></td>
+            			<td><input type="checkbox" name="seat" value="D5" <% if(isBooking[28]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="D6" <% if(isBooking[29]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="D7" <% if(isBooking[30]) out.println("disabled"); %>></td>
+            			<td><input type="checkbox" name="seat" value="D8" <% if(isBooking[31]) out.println("disabled"); %>></td>
 					</tr>
 				</tbody>
 			</table> 

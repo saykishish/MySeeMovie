@@ -42,7 +42,7 @@
 		
 		if(seatNumber != null) {
 			System.out.println("yes it is inside");
-			//RequestDispatcher dispacher = request.getRequestDispatcher("C9_f_order.jsp");
+			//RequestDispatcher dispacher = request.getRequestDispatcher("C9_f_order.jsp"); //這樣就會把 order這一頁帶入
 			//dispacher.include(request, response);
 			//只有 disabled = ture 才會進到這裡來。 其他都不會進來。
 			isDisabled = true;
