@@ -98,52 +98,52 @@ public class Order extends HttpServlet {
 
 		//動態輸出已經被下訂的座位  disabled
 		
-			out.print("座位A1沒有了!");
+			//out.print("座位A1沒有了!");
 
 		
 		
-			String seat = null;
-			
-			Properties props = new Properties();
-			props.setProperty("user", "root");
-			props.setProperty("password", "root");
-			
-			try {
-				Class.forName("com.mysql.jdbc.Driver");
-				Connection conn =
-				DriverManager.getConnection(
-					"jdbc:mysql://localhost/movie",props);
-				
-				if(isBooked(seat, conn)) {
-					System.out.println("yes seat is booked");
-					
-					//印出這些已被下訂的 disabled 座位
-					out.print("座位 xxx 沒有了!");
-					
-					
-				}else {
-					System.out.println("No exist!");
-				}
-				
-			}catch(Exception e) {
-				System.out.println(e.toString());
-			}
+//			String seat = null;
+//			
+//			Properties props = new Properties();
+//			props.setProperty("user", "root");
+//			props.setProperty("password", "root");
+//			
+//			try {
+//				Class.forName("com.mysql.jdbc.Driver");
+//				Connection conn =
+//				DriverManager.getConnection(
+//					"jdbc:mysql://localhost/movie",props);
+//				
+//				if(isBooked(seat, conn)) {
+//					System.out.println("yes seat is booked");
+//					
+//					//印出這些已被下訂的 disabled 座位
+//					//out.print("座位 xxx 沒有了!");
+//					
+//					
+//				}else {
+//					System.out.println("No exist!");
+//				}
+//				
+//			}catch(Exception e) {
+//				System.out.println(e.toString());
+//			}
 		
 	}
 
 
-	static boolean isBooked(String seat, Connection conn)throws SQLException {
-		String sql = "SELECT count(*) as count FROM seat WHERE seatNumber=?";
-		PreparedStatement pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1, seat);
-		ResultSet rs = pstmt.executeQuery();
-		rs.next();
-		int count = rs.getInt("count");
-		
-		System.out.println("isBooked資料有幾筆:" + count);//1 代表 有一筆資料
-		
-		return count != 0;  //不等於0 ，那就是有此筆資料
-	}
+//	static boolean isBooked(String seat, Connection conn)throws SQLException {
+//		String sql = "SELECT count(*) as count FROM seat WHERE seatNumber=?";
+//		PreparedStatement pstmt = conn.prepareStatement(sql);
+//		pstmt.setString(1, seat);
+//		ResultSet rs = pstmt.executeQuery();
+//		rs.next();
+//		int count = rs.getInt("count");
+//		
+//		System.out.println("isBooked資料有幾筆:" + count);//1 代表 有一筆資料
+//		
+//		return count != 0;  //不等於0 ，那就是有此筆資料
+//	}
 
 	
 	

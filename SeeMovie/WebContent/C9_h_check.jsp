@@ -9,18 +9,66 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%
-session.getAttribute("choice1");
-session.getAttribute("choice2");
-session.getAttribute("choice3");
-session.getAttribute("choice4");
-session.getAttribute("choice5");
+	String[] choice1 = (String[])session.getAttribute("choice1");
+	String[] choice2 = (String[])session.getAttribute("choice2");
+	String[] choice3 = (String[])session.getAttribute("choice3");
+	String[] choice4 = (String[])session.getAttribute("choice4");
+	String[] choice5 = (String[])session.getAttribute("choice5");
+	
+	System.out.println("choice1長度: " + choice1.length);  //四個元素
+	System.out.println("choice2長度: " + choice2.length);  //四個元素
+	System.out.println("choice3長度: " + choice3.length);  //四個元素
+	System.out.println("choice4長度: " + choice4.length);  //四個元素
+	System.out.println("choice5長度: " + choice5.length);  //四個元素
+	
+	if(choice1.length == 4){
+		for(String choice : choice1){
+			System.out.println("choice1: " + choice);
+			}			
+	}
 
+	if(choice2.length == 4){
+		for(String choice : choice2){
+			System.out.println("choice2: " + choice);
+			}
+	}
 
-request.getAttribute("ticket");
-request.getAttribute("seats");
+	if(choice3.length == 4){
+		for(String choice : choice3){
+			System.out.println("choice3: " + choice);
+			}			
+	}
 
-session.getAttribute("yebiGoldenIsland");
-session.getAttribute("imgString");
+	if(choice4.length == 4){
+		for(String choice : choice4){
+			System.out.println("choice4: " + choice);
+			}			
+	}
+
+	if(choice5.length == 4){
+		for(String choice : choice5){
+			System.out.println("choice5: " + choice);
+			}			
+	}
+
+	
+	
+	
+	String ticket = (String)request.getAttribute("ticket");
+	String[] seats = (String[])request.getAttribute("seats");
+	for(String seat : seats){
+		System.out.println("seats: " + seat);
+	}
+	
+	String name = (String)session.getAttribute("yebiGoldenIsland");
+	String img = (String)session.getAttribute("imgString");
+	
+	String account = (String)session.getAttribute("account");
+	
+	System.out.println("img: " + img + "\n" +
+					   "name:" + name +  "\n" +
+					   "ticket: " + ticket +  "\n" +
+					   "account" + account);
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">

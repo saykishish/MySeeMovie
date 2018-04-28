@@ -21,7 +21,7 @@ public class D_Check extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		request.setCharacterEncoding("UTF-8");
 
-		RequestDispatcher dispacher = request.getRequestDispatcher("e_congragulation.jsp");
+		RequestDispatcher dispacher = request.getRequestDispatcher("C9_i_congradulation.jsp");
 		dispacher.include(request, response);
 
 		
